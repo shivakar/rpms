@@ -1,4 +1,4 @@
-Name:       tmux
+Name:		tmux
 Version:	2.8
 Release:	1%{?dist}
 Summary:	A terminal multiplexer
@@ -6,11 +6,10 @@ Summary:	A terminal multiplexer
 Group:		Applications/System
 License:	BSD
 URL:		http://github.com/tmux/tmux
-Source:	    https://github.com/%{name}/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
+Source:		https://github.com/%{name}/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:	ncurses-devel
-BuildRequires:  libevent-devel
+BuildRequires:	libevent-devel
 
 # rpmbuild --target x86_64 -bb tmux.spec
 
@@ -35,10 +34,9 @@ rm -rf %{buildroot}
 %defattr(-, root, root, 0755)
 %doc %{_mandir}/man1/tmux.1.*
 %attr(2755, root, root) %{_bindir}/tmux
-%attr(0775, root, root) %{_localstatedir}/run/tmux/
 
 %changelog
 
-* 2019-03-06 Shivakar Vulli <svulli@shivakar.com> - 2.8
-- Initial release
+* Wed Mar 06 2019 Shivakar Vulli <svulli@shivakar.com>
+- tmux 2.8
 
